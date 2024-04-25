@@ -1,0 +1,53 @@
+﻿@model G.EntidadesNegocio.EN.PersonaEN
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<hr />
+<div class="col-md-4">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="NombreG" class="control-label"></label>
+            <input asp-for="NombreG" class="form-control" />
+            <span asp-validation-for="NombreG" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="ApellidoG" class="control-label"></label>
+            <input asp-for="ApellidoG" class="form-control" />
+            <span asp-validation-for="ApellidoG" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="FechaNacimientoG" class="control-label"></label>
+            <input asp-for="FechaNacimientoG" type="date" class="form-control" />
+            <span asp-validation-for="FechaNacimientoG" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="SueldoG" class="control-label"></label>
+            <input asp-for="SueldoG" class="form-control" />
+            <span asp-validation-for="SueldoG" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form group">
+            <label asp-for="EstatusG" class="control-label"></label>
+            <select asp-for="EstatusG" class="form-control">
+                <option value="Online">Online</option>
+                <option value="Out of line">Out of line</option>
+            </select>
+            <span asp-validation-for="EstatusG" class="text-danger"></span>
+        </div>
+        <div>
+            <input type="submit" value="Create" class="btn btn-primary" /> |
+        </div>
+    </form>
+</div>
+<br />
+<div class="form-group">
+    
+    
+    <a asp-action="Index">Regresar a la Lista</a>
+</div>

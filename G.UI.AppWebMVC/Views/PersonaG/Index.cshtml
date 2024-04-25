@@ -1,0 +1,59 @@
+﻿@model IEnumerable<G.EntidadesNegocio.EN.PersonaEN>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Mantenimieto Para PersonaG</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva Persona</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimientoG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SueldoG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstatusG)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimientoG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SueldoG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstatusG)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
